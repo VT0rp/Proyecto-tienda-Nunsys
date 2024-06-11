@@ -1,0 +1,44 @@
+img{
+  height: 480px;
+  width: 360px;
+}
+#primeraLinea{
+  display: flex;
+  justify-content: space-between;
+}
+.text-grey{
+  color: grey;
+}
+.valoracion > p{
+  display: inline;
+  margin-left: 5px;
+}
+.precio{
+  font-size: 3em;
+  margin-bottom: 35px;
+}
+.imagen-pequena{
+  height: 128px;
+  width: 72px;
+  margin-bottom: 35px;
+}
+.ml-1{
+  margin-left: 10px;
+}
+.btn{
+  border: 1px solid black;
+}
+.btn-container{
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+}
+.socials-container{
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+}
+
+.socials-container fa-icon{
+  color: darkgrey;
+}

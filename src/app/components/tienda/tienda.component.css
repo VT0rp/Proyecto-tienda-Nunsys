@@ -1,0 +1,17 @@
+.c-item{
+  height: 480px;
+}
+.c-image{
+  height: 100%;
+}
+img{
+  height: 360px;
+  width: 100%;
+}
+.cat-imagen{
+  height: 240px;
+}
+a{
+  color: inherit;
+  text-decoration: none;
+}

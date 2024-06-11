@@ -1,0 +1,56 @@
+<div class="container mt-3">
+  <div class="row" *ngIf="articulo != undefined">
+    <div class="col-5">
+      <img [src]="articulo.imagen" alt="imagen articulo">
+    </div>
+    <div class="col-7">
+      <div id="primeraLinea">
+        <h4 class="text-grey">Ropa</h4>
+        <div class="valoracion">
+          <fa-icon [icon]="faStar" class="text-grey"></fa-icon>
+          <fa-icon [icon]="faStar" class="text-grey"></fa-icon>
+          <fa-icon [icon]="faStar" class="text-grey"></fa-icon>
+          <fa-icon [icon]="faStar" class="text-grey"></fa-icon>
+          <fa-icon [icon]="faStar" class="text-grey"></fa-icon>
+          <p class="fw-bolder">Reviews (0)</p>
+        </div>
+      </div>
+      <h1>{{articulo.nombre}}</h1>
+      <p *ngIf="articulo.ofertas == 0" class="text-grey precio">{{articulo.precio | currency: "EUR"}}</p>
+      <p *ngIf="articulo.ofertas != 0" class="text-grey precio">{{articulo.ofertas | currency: "EUR"}}</p>
+      <p>Color: <span class="fw-bolder">Multicolor</span></p>
+      <img [src]="articulo.imagen" alt="imagen articulo" class="imagen-pequena">
+      <p>Size: <span class="fw-bolder">Choose size</span></p>
+      <div class="container">
+        <div class="row">
+          <div class="col-3 mb-3" *ngFor="let talla of articulo.tamanos">
+            <div class="card">
+              <div class="card-header">
+                <div class="card-title">
+                  <p class="card-text text-center">{{talla}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mb-2">
+        <fa-icon [icon]="faRuler"></fa-icon>
+        <p class="text-decoration-underline fw-bolder d-inline ml-1">Size chart</p>
+      </div>
+      <div class="btn-container mt-3 mb-3">
+        <button class="btn bg-dark text-white"><fa-icon [icon]="faMailBulk"></fa-icon> Wait List</button>
+        <button class="bg-white btn"><fa-icon [icon]="faHeart"></fa-icon> Wishlist</button>
+      </div>
+      <p>Is your size/color sold out? <span class="text-decoration-underline fw-bolder">Join the Wait List!</span></p>
+      <div class="socials-container">
+        <p class="fw-bolder">Share:</p>
+        <div>
+          <fa-icon [icon]="faTwitter" class="m-1"></fa-icon>
+          <fa-icon [icon]="faFacebook" class="m-1"></fa-icon>
+          <fa-icon [icon]="faPinterest" class="m-1"></fa-icon>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
